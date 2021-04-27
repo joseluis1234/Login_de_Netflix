@@ -1,0 +1,23 @@
+{
+  "name": "netflix_inicio",
+  "version": "1.0.0",
+  "description": "Proyecto Netlflix login con Flexbox, Gulp y Sass",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseluis1234/Login_de_Netflix.git"
+  },
+  "author": "Jose Luis Leon Vargas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joseluis1234/Login_de_Netflix/issues"
+  },
+  "homepage": "https://github.com/joseluis1234/Login_de_Netflix#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1"
+  }
+}
