@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DevFLix</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="css/app.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DevFLix</title>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <img src="img/logo.svg" alt="logotipo">
+        </header>
 
+        <main class="formulario-login contenedor">
+            <div class="contenedor-login">
+                <form action="#">
+                    <legend>Iniciar sesión</legend>
+                    <div class="campo">
+                        <input type="email" id="usuario">
+                        <label>Email o número de teléfono</label>
+                    </div>
+                    <div class="campo">
+                        <input type="password" id="password">
+                        <label>Contraseña</label>
+                    </div>
+                    <div class="submit">
+                        <input type="button" value="Iniciar sesión">
+                    </div>
+                    <div class="acciones">
+                        <div class="recuerdame">
+                            <input type="checkbox" name="Recuerdame">
+                            <label>Recuerdame</label>
+                        </div>
+                        <div class="ayuda">
+                            <a href="#">¿Necesitas ayuda?</a>
+                        </div>
+                    </div>
+                </form>
 
-</body>
+                <div class="contenido-inferior">
+                    <a href="#">Iniciar sesión con facebook</a>
+                    <a href="#">¿Primera vez en Netflix
+                        <span>Suscribete ya</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="contenedor">
+                <p>¿Preguntas? Llama al 800-283-3300</p>
+                <nav class="menu-footer">
+                    <a href="#">Preguntas frecuentes</a>
+                    <a href="#">Centro de ayuda</a>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Preferencias de cookies</a>
+                    <a href="#">Información corporativa</a>
+                </nav>
+                <select class="idioma">
+                    <option value="eng">English</option>
+                    <option value="esp">Español</option>
+                </select>
+            </div> <!--contenedor -->
+        </footer>
+    </body>
 </html>
