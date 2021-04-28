@@ -1,0 +1,23 @@
+
+/*Media Queries*/
+
+@mixin telefono {
+    @media (min-width:#{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:#{$telefono}) {
+        @content;
+    }
+}
+@mixin telefono {
+    @media (min-width:#{$telefono}) {
+        @content;
+    }
+}
+
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
