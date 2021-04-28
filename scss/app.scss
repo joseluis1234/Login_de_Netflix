@@ -71,13 +71,27 @@ form{
 
         label{
             position: absolute;
+            top: 1.1rem;
+            left: 1rem;
+            font-size: .9rem;
+            transition: font-size .2s ease, top .2s ease;
         }
         input{
             flex: 1;
             padding: 1.3rem 1rem .7rem 1rem;
             border: none;
             background-color: $gris;
-            border-radius:$radius ;
+            border-radius:$radius;
+            &:focus{
+                background-color: $gris3;
+                outline: none;
+
+                + label{
+                    font-size: .6rem;
+                    top:.5rem;
+
+                }
+            }
         }
     }
 }
