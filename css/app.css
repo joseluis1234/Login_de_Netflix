@@ -132,7 +132,8 @@ form .acciones {
   margin: 0.5rem 0 8rem 0;
 }
 
-form .acciones label, form .acciones a {
+form .acciones label,
+form .acciones a {
   font-size: 0.9rem;
   text-decoration: none;
 }
@@ -142,13 +143,19 @@ form .acciones label, form .acciones a {
 }
 
 .contenido-inferior a {
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 
 .contenido-inferior a img {
   max-width: 7%;
   margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .contenido-inferior a img img {
+    max-width: 100%;
+  }
 }
 
 .contenido-inferior .nuevo-usuario {
@@ -161,13 +168,63 @@ form .acciones label, form .acciones a {
   font-size: 1rem;
   color: #FFFFFF;
   font-weight: 700;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
+}
+
+.site-footer {
+  border-top: 1px solid #8c8c8c;
+  padding: 2rem 0 4rem 0;
 }
 
 @media (min-width: 768px) {
   .site-footer {
+    border-top: unset;
     background-color: rgba(0, 0, 0, 0.85);
     max-height: 100%;
     padding: 2rem 4rem;
   }
+}
+
+.site-footer .contenedor {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .site-footer .contenedor {
+    max-width: 59%;
+  }
+}
+
+.site-footer .contenedor p {
+  margin: 0 0 2rem 0;
+}
+
+.site-footer .menu-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-footer .menu-footer a {
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  margin-right: 2rem;
+  padding: .5rem 0;
+}
+
+.site-footer .menu-footer a:last-of-type {
+  margin-right: 0;
+}
+
+.site-footer select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  border: 1px solid #323232;
+  border-radius: 5px;
+  font-size: .8rem;
+  background-color: #000000;
+  color: #8c8c8c;
 }
