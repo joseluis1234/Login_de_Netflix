@@ -37,6 +37,18 @@ a {
   margin: 0 auto;
 }
 
+.alerta {
+  color: $secundario;
+  display: block;
+  margin: 0 0 0.5rem 0;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+}
+
+input.no-valido {
+  border-bottom: 2px solid $secundario !important;
+}
+
 .logotipo {
   margin-top: 0.5rem;
   max-width: 180px;
@@ -67,6 +79,14 @@ form {
     display: flex;
     position: relative;
     margin-bottom: 0.8rem;
+    span {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      &:hover{
+        cursor: pointer;
+      }
+    }
 
     label {
       position: absolute;
@@ -74,6 +94,11 @@ form {
       left: 1rem;
       font-size: 0.9rem;
       transition: font-size 0.2s ease, top 0.2s ease;
+
+      &.valido {
+        font-size: 0.6rem;
+        top: 0.5rem;
+      }
     }
     input {
       flex: 1;
@@ -81,6 +106,7 @@ form {
       border: none;
       background-color: $gris;
       border-radius: $radius;
+      color: $blanco;
       &:focus {
         background-color: $gris3;
         outline: none;
@@ -174,27 +200,26 @@ form {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @include tablet{
-      
+    @include tablet {
     }
     a {
       flex: 0 0 auto;
       font-size: 0.9rem;
       margin-right: 2rem;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
 
       &:last-of-type {
         margin-right: 0;
       }
     }
   }
-  select{
+  select {
     appearance: none;
     margin-top: 2rem;
     padding: 1rem 3rem;
     border: 1px solid $gris;
     border-radius: $radius;
-    font-size: .8rem;
+    font-size: 0.8rem;
     background-color: $negro;
     color: $gris2;
   }
