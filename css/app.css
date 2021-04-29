@@ -43,13 +43,13 @@ a:hover {
 }
 
 .logotipo {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   max-width: 180px;
 }
 
 @media (min-width: 768px) {
   .logotipo {
-    margin-top: .8rem;
+    margin-top: 0.8rem;
     margin-left: 2%;
   }
 }
@@ -73,20 +73,20 @@ form legend {
 form .campo {
   display: flex;
   position: relative;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 form .campo label {
   position: absolute;
   top: 1.1rem;
   left: 1rem;
-  font-size: .9rem;
-  transition: font-size .2s ease, top .2s ease;
+  font-size: 0.9rem;
+  transition: font-size 0.2s ease, top 0.2s ease;
 }
 
 form .campo input {
   flex: 1;
-  padding: 1.3rem 1rem .7rem 1rem;
+  padding: 1.3rem 1rem 0.7rem 1rem;
   border: none;
   background-color: #323232;
   border-radius: 5px;
@@ -98,6 +98,76 @@ form .campo input:focus {
 }
 
 form .campo input:focus + label {
-  font-size: .6rem;
-  top: .5rem;
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+
+form .submit {
+  display: flex;
+  margin-top: 2rem;
+}
+
+form .submit input[type="submit"] {
+  background-color: #E50914;
+  color: #FFFFFF;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+form .submit input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+form .acciones {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0 8rem 0;
+}
+
+form .acciones label, form .acciones a {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.contenido-inferior {
+  padding-bottom: 2rem;
+}
+
+.contenido-inferior a {
+  font-size: .8rem;
+  text-align: center;
+}
+
+.contenido-inferior a img {
+  max-width: 7%;
+  margin-right: 0.5rem;
+}
+
+.contenido-inferior .nuevo-usuario {
+  font-size: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.contenido-inferior .nuevo-usuario a {
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-left: .5rem;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    max-height: 100%;
+    padding: 2rem 4rem;
+  }
 }

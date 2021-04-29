@@ -1,97 +1,158 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
-html{
-    @include box-sizing(border-box);
+html {
+  @include box-sizing(border-box);
 }
 *,
 *:after,
-*:before{
-    @include box-sizing(inherit);
+*:before {
+  @include box-sizing(inherit);
 }
 
-body{
-    background-color: $negro;
-    font-family: $fuente_principal;
-    color: $gris2;
-    
-    @include tablet{
-        background-color: unset;
-        background-image: url(../img/bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom center;
+body {
+  background-color: $negro;
+  font-family: $fuente_principal;
+  color: $gris2;
+
+  @include tablet {
+    background-color: unset;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+  }
+}
+
+a {
+  color: $gris2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logotipo {
+  margin-top: 0.5rem;
+  max-width: 180px;
+
+  @include tablet {
+    margin-top: 0.8rem;
+    margin-left: 2%;
+  }
+}
+
+.formulario-login {
+  @include tablet {
+    background-color: rgba(0, 0, 0, 0.85);
+    max-width: 450px;
+    padding: 2rem 4rem;
+    margin: 1rem auto 4rem auto;
+  }
+}
+
+form {
+  legend {
+    color: $blanco;
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: bold;
+  }
+  .campo {
+    display: flex;
+    position: relative;
+    margin-bottom: 0.8rem;
+
+    label {
+      position: absolute;
+      top: 1.1rem;
+      left: 1rem;
+      font-size: 0.9rem;
+      transition: font-size 0.2s ease, top 0.2s ease;
     }
-}
+    input {
+      flex: 1;
+      padding: 1.3rem 1rem 0.7rem 1rem;
+      border: none;
+      background-color: $gris;
+      border-radius: $radius;
+      &:focus {
+        background-color: $gris3;
+        outline: none;
 
-a{
-    color: $gris2;
-    text-decoration: none;
-    &:hover{
-        text-decoration: underline;
-    }
-}
-
-.contenedor{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.logotipo{
-    margin-top:.5rem ;
-    max-width: 180px;
-
-    @include tablet{
-        margin-top: .8rem;
-        margin-left: 2%;
-    }
-}
-
-.formulario-login{
-    
-    @include tablet{
-        background-color: rgba(0,0,0, 0.85);
-        max-width: 450px;
-        padding: 2rem 4rem;
-        margin: 1rem auto 4rem auto;
-    }
-}
-
-form{
-    legend{
-        color: $blanco;
-        font-size: 2rem;
-        margin: 2rem 0;
-        font-weight: bold ;
-    }
-    .campo{
-        display: flex;
-        position: relative;
-        margin-bottom: .8rem;
-
-        label{
-            position: absolute;
-            top: 1.1rem;
-            left: 1rem;
-            font-size: .9rem;
-            transition: font-size .2s ease, top .2s ease;
+        + label {
+          font-size: 0.6rem;
+          top: 0.5rem;
         }
-        input{
-            flex: 1;
-            padding: 1.3rem 1rem .7rem 1rem;
-            border: none;
-            background-color: $gris;
-            border-radius:$radius;
-            &:focus{
-                background-color: $gris3;
-                outline: none;
-
-                + label{
-                    font-size: .6rem;
-                    top:.5rem;
-
-                }
-            }
-        }
+      }
     }
+  }
+
+  .submit {
+    display: flex;
+    margin-top: 2rem;
+
+    input[type="submit"] {
+      @include boton($primario);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .acciones {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0 8rem 0;
+
+    label, a {
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+  }
+}
+
+.contenido-inferior{
+  padding-bottom: 2rem;
+  
+  a{
+    font-size: .8rem;
+    text-align: center;
+
+    img{
+      max-width: 7%;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .nuevo-usuario{
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    a{
+      font-size: 1rem;
+      color: $blanco;
+      font-weight: 700;
+      margin-left: .5rem;
+    }
+  }
+}
+
+.site-footer{
+  @include tablet {
+    background-color: rgba(0, 0, 0, 0.85);
+    max-height: 100%;
+    padding: 2rem 4rem;
+  }
+
+  .contenedor{
+    
+  }
 }
